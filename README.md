@@ -1,15 +1,15 @@
-# StyleTransfer-in-TD
+# Styl eTransfer in TouchDesigner
 
 This is a TouchDesigner implementation of the Style Transfer using Neural Networks. Project is based on 
 * [TensorFlow (Python API) implementation of Neural Style](https://github.com/cysmith/neural-style-tf) by [cysmith](https://github.com/jcjohnson) 
 
-You can read about underlying math of the algorith [here](https://harishnarayanan.org/writing/artistic-style-transfer/) 
+You can read about underlying math of the algorithm [here](https://harishnarayanan.org/writing/artistic-style-transfer/) 
 
 Here is some results next to the original photo:
 <p align="center">
 <img src="input/tubingen.jpg" height="192px">
 <img src="output/result5004942.png" height="192px">
-<img src="result500461356.png" height="192px">
+<img src="output/result500461356.png" height="192px">
 
 <img src="output/result500495910.png" height="192px">
 <img src="output/result500522971.png" height="192px">
@@ -21,7 +21,7 @@ Here is some results next to the original photo:
 
 0. Install [TouchDesigner](https://www.derivative.ca/099/Downloads/)
 1. Install [Tensorflow for Windows](https://www.tensorflow.org/install/install_windows). It's higly recomended to use GPU version (so, you'll also need do install [CUDA](https://developer.nvidia.com/cuda-downloads) and, optionally, [cuDNN](https://developer.nvidia.com/cudnn)). You can install Tensorflow directly to Python directory or with [Anaconda](https://conda.io/docs/download.html).
-2. In TouchDesigner menu Edit - Preferences - Python 32/64 bit Module Path add path to folder, where tensorflow is installed (i.e. C:/Anaconda3/envs/TFinTD/Lib/site-packages). [Details](http://www.derivative.ca/wiki099/index.php?title=Introduction_to_Python_Tutorial#Importing_Modules). To check your installation, in Textport (Alt+t) run:
+2. In TouchDesigner menu `Edit - Preferences - Python 32/64 bit Module Path` add path to folder, where Tensorflow is installed (i.e. C:/Anaconda3/envs/TFinTD/Lib/site-packages). [Details](http://www.derivative.ca/wiki099/index.php?title=Introduction_to_Python_Tutorial#Importing_Modules). To check your installation run in Textport (Alt+t):
 ```
 import tensorflow as tf
 hello = tf.constant('Hello, TensorFlow!')
