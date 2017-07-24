@@ -13,7 +13,7 @@ Here is some results next to the original photo:
 
 <img src="output/result500495910.png" height="192px">
 <img src="output/result500522971.png" height="192px">
-<img src="output/result500547103.png" height="192px">
+<img src="output/result500558121.png" height="192px">
 </p>
 
 
@@ -71,13 +71,11 @@ You should see path to numpy in your Python directory or Conda enviroment (i.e. 
 * `Noise_ratio`: Interpolation value between the content image and noise image if network is initialized with `random`.
 * `Optimizer` - Loss minimization optimizer.  L-BFGS gives better results. Adam uses less memory.`
 * `Learning_rate` - Learning-rate parameter for the Adam optimizer. 
-
 <p align="center">
 <img src="examples/equations/plot.png" width="360px">
 </p>
 * `VGG19 layers for content\style image`: [VGG-19](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) layers and weights used for the content\style image.
 * `Constant (K) for the lossfunction` - Different constants K in the content loss function. 
-
 <p align="center">
 <img src="examples/equations/content.png" width="321px">
 </p>
@@ -113,7 +111,7 @@ These produce better and faster results, but can consume a lot of memory. You ca
 
 
 ## Contacts
-Contact me via exsstas@ya.ro or in [Twitter](https://twitter.com/exsstas)
+Contact me via exsstas@ya.ru or in [Twitter](https://twitter.com/exsstas)
 
 <p align="center">
 <img src="output/result1000395331.png" width="400px">
