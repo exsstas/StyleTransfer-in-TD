@@ -1,4 +1,4 @@
-# Styl eTransfer in TouchDesigner
+# Style Transfer in TouchDesigner
 
 This is a TouchDesigner implementation of the Style Transfer using Neural Networks. Project is based on 
 * [TensorFlow (Python API) implementation of Neural Style](https://github.com/cysmith/neural-style-tf) by [cysmith](https://github.com/jcjohnson) 
@@ -21,7 +21,7 @@ Here is some results next to the original photo:
 
 0. Install [TouchDesigner](https://www.derivative.ca/099/Downloads/)
 1. Install [Tensorflow for Windows](https://www.tensorflow.org/install/install_windows). It's higly recomended to use GPU version (so, you'll also need do install [CUDA](https://developer.nvidia.com/cuda-downloads) and, optionally, [cuDNN](https://developer.nvidia.com/cudnn)). You can install Tensorflow directly to Python directory or with [Anaconda](https://conda.io/docs/download.html).
-2. In TouchDesigner menu `Edit - Preferences - Python 32/64 bit Module Path` add path to folder, where Tensorflow is installed (i.e. C:/Anaconda3/envs/TFinTD/Lib/site-packages). [Details](http://www.derivative.ca/wiki099/index.php?title=Introduction_to_Python_Tutorial#Importing_Modules). To check your installation run in Textport (Alt+t):
+2. In TouchDesigner menu `Edit - Preferences - Python 32/64 bit Module Path` add path to folder, where Tensorflow is installed (i.e. C:/Anaconda3/envs/TFinTD/Lib/site-packages). [Details here](http://www.derivative.ca/wiki099/index.php?title=Introduction_to_Python_Tutorial#Importing_Modules). To check your installation run in Textport (Alt+t):
 ```
 import tensorflow as tf
 hello = tf.constant('Hello, TensorFlow!')
@@ -47,8 +47,8 @@ You should see path to numpy in your Python directory or Conda enviroment (i.e. 
 2. Choose content image in `input` TOP
 3. Choose style image in `style1` TOP
 4. Press `Run Style Transfer` in UI
-5. Wait. TouchDesigner wouldn't respond for some seconds or minutes (depend on your GPU and resolutions of the images).
-6. Result will be in `result` TOP, linked to a file in /output/ folder. Log with some info is in `log` DAT - save it somewhere, if needed.
+5. Wait. TouchDesigner wouldn't respond for some seconds or minutes (depends on your GPU and resolutions of the images).
+6. Result will be in `result` TOP, linked to a file in the `/output` folder. Log with some info is in `log` DAT - save it somewhere, if needed.
 7. Experiment with settings
 8. Experiment with the code in `/StyleTransfer/local/modules/main` DAT
 9. If something isn't working - first check errors in Textport
@@ -63,7 +63,7 @@ You should see path to numpy in your Python directory or Conda enviroment (i.e. 
 * `Use style masks` if you want to apply style transfer to specific areas of the image. Choose masks in stylemask TOPs. Style applied to white regions.
 * `Keep original colors` if the style is transferred but not the colors.
 * `Color space convertion`: Color spaces (YUV, YCrCb, CIE L\*u\*v\*, CIE L\*a\*b\*) for luminance-matching conversion to original colors.
-* `Content_weight` - Weight for the content loss function. You can use numbers in [scientific e notation](http://www.onlineconversion.com/faq_06.htm)
+* `Content_weight` - Weight for the content loss function. You can use numbers in [scientific E notation](http://www.onlineconversion.com/faq_06.htm)
 * `Style_weight` - Weight for the style loss function.
 * `Temporal_weight` - Weight for the temporal loss function.
 * `Total variation weight` - Weight for the total variational loss function.
@@ -82,7 +82,7 @@ You should see path to numpy in your Python directory or Conda enviroment (i.e. 
 </p>
 
 * `Type of pooling in CNN` - Maximum or average ype of pooling in convolutional neural network.
-* `Path to VGG file`: Path to `imagenet-vgg-verydeep-19.mat` Download [here](http://www.vlfeat.org/matconvnet/pretrained/).
+* `Path to VGG file`: Path to `imagenet-vgg-verydeep-19.mat` [Download it here](http://www.vlfeat.org/matconvnet/pretrained/).
 
 
 ## Memory
