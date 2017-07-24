@@ -72,13 +72,15 @@ You should see path to numpy in your Python directory or Conda enviroment (i.e. 
 * `Optimizer` - Loss minimization optimizer.  L-BFGS gives better results. Adam uses less memory.`
 * `Learning_rate` - Learning-rate parameter for the Adam optimizer. 
 <p align="center">
-<img src="examples/equations/plot.png" width="360px">
+<img src="lrate.png" width="360px">
 </p>
+
 * `VGG19 layers for content\style image`: [VGG-19](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) layers and weights used for the content\style image.
 * `Constant (K) for the lossfunction` - Different constants K in the content loss function. 
 <p align="center">
-<img src="examples/equations/content.png" width="321px">
+<img src="K.png" width="321px">
 </p>
+
 * `Type of pooling in CNN` - Maximum or average ype of pooling in convolutional neural network.
 * `Path to VGG file`: Path to `imagenet-vgg-verydeep-19.mat` Download [here](http://www.vlfeat.org/matconvnet/pretrained/).
 
