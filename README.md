@@ -57,6 +57,7 @@ cv2: 3.2.0-dev
 tensorflow: 1.2.0
 ```
 If your numpy version is lower, probly you are using numpy built from TocuhDesigner folder. Check step 4.
+
 6. Download the [VGG-19 model weights](http://www.vlfeat.org/matconvnet/pretrained/) (see the "VGG-VD models from the *Very Deep Convolutional Networks for Large-Scale Visual Recognition* project" section). After downloading, copy the weights file `imagenet-vgg-verydeep-19.mat` to the project directory or set path to it, using Style transfer user interface in TouchDesigner (`StyleTransfer.toe` last row `Path to VGG` in UI).
 
 ## Usage
