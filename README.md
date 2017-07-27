@@ -29,6 +29,7 @@ sess = tf.Session()
 print(sess.run(hello))
 ```
 If the system outputs `Hello, TensorFlow!`, then Tensorflow in TouchDesigner works well.
+
 3. Run command line or Powershell, activate conda enviroment (if Tensorflow was installed in conda) and install:
 * numpy
 * scipy
@@ -39,7 +40,24 @@ import numpy
 numpy
 ```
 You should see path to numpy in your Python directory or Conda enviroment (i.e. `C:/Anaconda3/envs/TFinTD/Lib/site-packages\\numpy\\__init__.py`)
-5. Download the [VGG-19 model weights](http://www.vlfeat.org/matconvnet/pretrained/) (see the "VGG-VD models from the *Very Deep Convolutional Networks for Large-Scale Visual Recognition* project" section). After downloading, copy the weights file `imagenet-vgg-verydeep-19.mat` to the project directory or set path to it, using Style transfer user interface in TouchDesigner (`StyleTransfer.toe` last row `Path to VGG` in UI).
+
+5. You can use `check.toe` to check your setup: open textport (Alt+t), right click on GPU DAT (or CPU, if you going to use it) and choose "Run script". In textport you should see something like:
+```
+python >>> 
+[[ 22.  28.]
+ [ 49.  64.]]
+ ```
+
+Then run modules check. You should see:
+```
+python >>> 
+numpy: 1.13.0
+scipy: 0.19.1
+cv2: 3.2.0-dev
+tensorflow: 1.2.0
+```
+If your numpy version is lower, probly you are using numpy built from TocuhDesigner folder. Check step 4.
+6. Download the [VGG-19 model weights](http://www.vlfeat.org/matconvnet/pretrained/) (see the "VGG-VD models from the *Very Deep Convolutional Networks for Large-Scale Visual Recognition* project" section). After downloading, copy the weights file `imagenet-vgg-verydeep-19.mat` to the project directory or set path to it, using Style transfer user interface in TouchDesigner (`StyleTransfer.toe` last row `Path to VGG` in UI).
 
 ## Usage
 ### Basic Usage
