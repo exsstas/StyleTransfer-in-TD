@@ -20,7 +20,7 @@ Here is some results next to the original photo:
 ## Setup
 
 0. Install [TouchDesigner](https://www.derivative.ca/099/Downloads/)
-1. Install [Tensorflow for Windows](https://www.tensorflow.org/install/install_windows). It's higly recomended to use GPU version (so, you'll also need do install [CUDA](https://developer.nvidia.com/cuda-downloads) and, optionally, [cuDNN](https://developer.nvidia.com/cudnn)). You can install Tensorflow directly to Python directory or with [Anaconda](https://conda.io/docs/download.html).
+1. Install [Tensorflow for Windows 1.4](https://www.tensorflow.org/install/install_windows). It's higly recomended to use GPU version (so, you'll also need do install [CUDA](https://developer.nvidia.com/cuda-downloads) and, optionally, [cuDNN](https://developer.nvidia.com/cudnn)). You can install Tensorflow directly to Python directory or with [Anaconda](https://conda.io/docs/download.html). Touch currently uses [CUDA 8](https://docs.derivative.ca/CUDA) and Tensorflow higher than 1.4 needs CUDA 9, so you'll need to install tensorflow=1.4
 2. In TouchDesigner menu `Edit - Preferences - Python 32/64 bit Module Path` add path to folder, where Tensorflow is installed (i.e. C:/Anaconda3/envs/TFinTD/Lib/site-packages). [Details here](http://www.derivative.ca/wiki099/index.php?title=Introduction_to_Python_Tutorial#Importing_Modules). To check your installation run in Textport (Alt+t):
 ```
 import tensorflow as tf
@@ -31,7 +31,7 @@ print(sess.run(hello))
 If the system outputs `Hello, TensorFlow!`, then Tensorflow in TouchDesigner works well.
 
 3. Run command line or Powershell, activate conda enviroment (if Tensorflow was installed in conda) and install:
-* numpy
+* numpy (or numpy+mkl)
 * scipy
 * opencv (OpenCV preinstalled in TouchDesigner 099 works fine, but for 088 you should install it manually in Python (or conda))
 4. [Override built-in numpy module](http://www.derivative.ca/wiki099/index.php?title=Introduction_to_Python_Tutorial#Overriding_built_in_modules). To check in TouchDesigner Textport enter
@@ -48,15 +48,15 @@ python >>>
  [ 49.  64.]]
  ```
 
-Then run modules check. You should see:
+Then run modules check. You should see something like:
 ```
 python >>> 
 numpy: 1.13.0
-scipy: 0.19.1
+scipy: 1.1.0
 cv2: 3.2.0-dev
-tensorflow: 1.2.0
+tensorflow: 1.4.0
 ```
-If your numpy version is lower, probly you are using numpy built from TocuhDesigner folder. Check step 4.
+If your numpy version is lower, probly you are using numpy built from TouchDesigner folder. Check step 4.
 
 6. Download the [VGG-19 model weights](http://www.vlfeat.org/matconvnet/pretrained/) (see the "VGG-VD models from the *Very Deep Convolutional Networks for Large-Scale Visual Recognition* project" section). After downloading, copy the weights file `imagenet-vgg-verydeep-19.mat` to the project directory or set path to it, using Style transfer user interface in TouchDesigner (`StyleTransfer.toe` last row `Path to VGG` in UI).
 
@@ -121,10 +121,10 @@ These produce better and faster results, but can consume a lot of memory. You ca
 * **OS:** Windows 10 64-bit
 * **TouchDesigner:** 099 64-bit built 2017.10000
 * **Anaconda:** 4.3.14
-* **tensorflow-gpu:** 1.2.0 
-* **opencv:** 3.2.0-dev (used built-in TouchDesigner)
-* **numpy:** 1.13.0 (used version installed in conda enviroment)
-* **scipy:** 0.19.1 (used version installed in conda enviroment)
+* **tensorflow-gpu:** 1.2.0 (tested on 1.4.0 as well)
+* **opencv (built-in TouchDesigner):** 3.2.0-dev 
+* **numpy (installed in conda enviroment):** 1.13.0 (tested on 1.14.5+mkl as well)
+* **scipy (installed in conda enviroment):** 0.19.1 (tested on 1.1.0 as well)
 
 
 ## The implementation is based on the project: 
