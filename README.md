@@ -117,13 +117,13 @@ These produce better and faster results, but can consume a lot of memory. You ca
 * **CPU:** Intel Core i7-4790K @ 4.0GHz × 8 
 * **GPU:** NVIDIA GeForce GTX 1070 8 Gb
 * **CUDA:** 8.0
-* **cuDNN:** v5.1
+* **cuDNN:** v5.1 (or higher)
 * **OS:** Windows 10 64-bit
 * **TouchDesigner:** 099 64-bit built 2017.10000
 * **Anaconda:** 4.3.14
 * **tensorflow-gpu:** 1.2.0 (tested on 1.4.0 as well)
 * **opencv (built-in TouchDesigner):** 3.2.0-dev 
-* **numpy (installed in conda enviroment):** 1.13.0 (tested on 1.14.5+mkl as well)
+* **numpy (installed in conda enviroment):** 1.13.0 (tested on 1.15.1 as well)
 * **scipy (installed in conda enviroment):** 0.19.1 (tested on 1.1.0 as well)
 
 
